@@ -8,13 +8,24 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/f05d368172.js" crossorigin="anonymous"></script>
 </head>
+<style>
+    label i {
+        color: #abafb5;
+    }
+</style>
 <body>
-    <div class="container">
-        <form action="#" class="row">
-            <div class="row">
-                <legend><h3>Payment form example</h3></legend>
+    <div class="container-fluid justify-content-center" >
+        <form action="https://www.google.com" class="row mt-3 mx-3 d-flex justify-content-center" method="get" style="border: 2px solid whitesmoke;">
+            <div class="row" style="border-bottom: 2px solid whitesmoke">
+                <legend class="my-4"><h3><strong>Payment form example</strong></h3></legend>
             </div>
             <div class="row">
+                <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
+                    <strong>Some fields are missing</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+            </div>
+            <div class="row mt-3">
                 <fieldset class="col-12">
                     <div class="row">
                         <div class="col-5">
@@ -70,32 +81,43 @@
                                 <label for="cardtype" class="form-label"><h5>We accept:</h5></label><br>
                             </div>
                             <div class="row">
-                                <div class="col-7">
-                                    <div class="container bg-secondary d-flex justify-content-between">
+                                <div class="col-6">
+                                    <div class="container bg-secondary d-flex justify-content-between rounded">
                                         <div class="form-check form-check-inline py-2">
                                             <input type="radio" class="form-check-input" name="cardtypes" id="mastercard">
                                             <label for="mastercard" class="form-check-label"><i class="fa-brands fa-cc-mastercard fa-xl"></i></label>
                                         </div>
-                                        <div class="form-check form-check-inline">
+                                        <div class="form-check form-check-inline py-2">
                                             <input type="radio" class="form-check-input" name="cardtypes" id="visa">
                                             <label for="visa" class="form-check-label"><i class="fa-brands fa-cc-visa fa-xl"></i></label>
                                         </div>
-                                        <div class="form-check form-check-inline">
+                                        <div class="form-check form-check-inline py-2">
                                             <input type="radio" class="form-check-input" name="cardtypes" id="dinersclub">
                                             <label for="dinersclub" class="form-check-label"><i class="fa-brands fa-cc-diners-club fa-xl"></i></label>
                                         </div>
-                                        <div class="form-check form-check-inline">
+                                        <div class="form-check form-check-inline py-2">
                                             <input type="radio" class="form-check-input" name="cardtypes" id="amex">
                                             <label for="amex" class="form-check-label"><i class="fa-brands fa-cc-amex fa-xl"></i></label>
                                         </div>
                                     </div>
                                 </div>
-                            </div>                          
-                            
+                            </div>                           
                         </div>
-                        <div class="col-6"></div>
+                        <div class="col-6">
+                            <h4>Message</h4>
+                            <div class="form-floating">
+                                <textarea name="comments" id="comments" cols="30" rows="50" class="form-control" style="height: 180px;"></textarea>
+                            </div>
+                            <p style="color: #abafb5;">Add any notes here.</p>
+                        </div>
                     </div>
                 </fieldset>
+            </div>
+            <div class="row" style="border-top: 2px solid whitesmoke;">
+                <div class="container d-flex justify-content-end">
+                    <div class="btn btn-secondary mx-2 my-4">Cancel</div>
+                    <input type="submit" class="btn btn-primary mx-2 my-4" placeholder="Send"></input>
+                </div>
             </div>
         </form>
     </div>
